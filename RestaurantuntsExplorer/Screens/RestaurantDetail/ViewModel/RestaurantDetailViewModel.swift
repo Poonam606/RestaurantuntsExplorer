@@ -12,6 +12,8 @@ class RestaurantDetailViewModel: ObservableObject{
     @Published var restaurant: RestaurantDetailData?
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
+    
+   
     //MARK: fetch restaurant Detail
     @MainActor
     func fetchRestaurants(id:String) async {

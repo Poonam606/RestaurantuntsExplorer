@@ -10,7 +10,6 @@ import SwiftUI
 struct RestaurantFeedView: View {
     @StateObject private var viewModel = RestaurantFeedViewModel()
     @StateObject var detailViewModel = RestaurantDetailViewModel()
-    @State private var selectedrestaurant : Restaurant?
     @StateObject private var networkMonitor = ConnectionManger()
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -62,9 +61,7 @@ struct RestaurantFeedView: View {
                             }
                         }
                     }
-                    .task {
-                        await viewModel.fetchRestaurants()
-                    }
+                    
                     //Navigation Destination
                     .navigationDestination(for: Restaurant.self, destination: { restaurant in
                         RestaurantDetailView(restaurant: restaurant)

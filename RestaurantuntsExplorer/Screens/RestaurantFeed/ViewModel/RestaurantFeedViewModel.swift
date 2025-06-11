@@ -11,6 +11,11 @@ class RestaurantFeedViewModel: ObservableObject{
     @Published var restaurants =  [Restaurant]()
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
+    init() {
+           Task {
+               await fetchRestaurants()
+           }
+       }
     //MARK: fetch restaurant
     @MainActor
     func fetchRestaurants() async {
