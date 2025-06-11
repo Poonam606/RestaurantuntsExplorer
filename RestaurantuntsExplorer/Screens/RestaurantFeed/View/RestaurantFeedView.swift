@@ -61,7 +61,6 @@ struct RestaurantFeedView: View {
                             }
                         }
                     }
-                    
                     //Navigation Destination
                     .navigationDestination(for: Restaurant.self, destination: { restaurant in
                         RestaurantDetailView(restaurant: restaurant)

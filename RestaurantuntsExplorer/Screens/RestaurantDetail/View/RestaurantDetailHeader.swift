@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RestaurantDetailHeader: View {
     @ObservedObject var detailViewModel: RestaurantDetailViewModel
-    var onBack: () -> Void
     var body: some View {
         ZStack (alignment:.topLeading){
             
@@ -26,25 +25,7 @@ struct RestaurantDetailHeader: View {
                 }
             } else {
                      Color(.lightGray).opacity(0.2)
-                    
-                    
-                
             }
-       // back button
-           /* Button(action: onBack) {
-                HStack(spacing: 4) {
-                    Image(systemName: "chevron.left")
-                        .font(.inter(size: 18, weight: .semibold))
-                    Text("Back")
-                        .font(.inter(size: 18, weight: .semibold))
-                }
-                .foregroundColor(.white)
-                .padding(.top, safeAreaTop )
-                .padding(.leading, 16)
-            }*/
-           
-          
-           
         }
         .frame(height: 342)
         .edgesIgnoringSafeArea(.top)
@@ -58,5 +39,5 @@ struct RestaurantDetailHeader: View {
 }
 
 #Preview {
-    RestaurantDetailHeader(detailViewModel: RestaurantDetailViewModel(), onBack: {})
+    RestaurantDetailHeader(detailViewModel: RestaurantDetailViewModel())
 }

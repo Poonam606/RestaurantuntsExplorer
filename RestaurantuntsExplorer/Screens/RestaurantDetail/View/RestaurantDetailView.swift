@@ -11,7 +11,7 @@ struct RestaurantDetailView: View {
     let restaurant : Restaurant
     @StateObject var detailViewModel = RestaurantDetailViewModel()
     @StateObject private var networkMonitor = ConnectionManger()
-    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         VStack {
             // check internet connection
@@ -40,9 +40,7 @@ struct RestaurantDetailView: View {
                     else {
                         if let _ = detailViewModel.restaurant {
                             // header image
-                            RestaurantDetailHeader(detailViewModel: detailViewModel, onBack: {
-                                dismiss()
-                            })
+                            RestaurantDetailHeader(detailViewModel: detailViewModel)
                             // scrollableView
                             RestaurantDetailScrollableView(detailViewModel: detailViewModel)
                                 .padding(.top,-200)
