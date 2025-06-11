@@ -23,7 +23,6 @@ class RestaurantFeedViewModel: ObservableObject{
         do {
             let response: RestaurantResponse = try await ApiHelper.shared.getRequest(endPoint: url)
             self.restaurants = response.data
-            print("restaurant",self.restaurants)
         } catch {
             self.errorMessage = "Failed to load restaurants: \(error.localizedDescription)"
         }
