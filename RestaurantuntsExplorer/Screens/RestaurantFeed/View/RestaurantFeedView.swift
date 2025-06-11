@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RestaurantFeedView: View {
     @StateObject private var viewModel = RestaurantFeedViewModel()
-    @StateObject var detailViewModel = RestaurantDetailViewModel()
     @StateObject private var networkMonitor = ConnectionManger()
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -38,9 +37,13 @@ struct RestaurantFeedView: View {
                             // list view
                             if !viewModel.restaurants.isEmpty{
                                 VStack(alignment: .leading,spacing: 16) {
-                                    Text("Restaurants")
-                                        .padding(.leading,16)
-                                        .font(.inter(size: 34,weight: .semibold))
+                                    VStack {
+                                        Text("Restaurants")
+                                            .padding(.leading,16)
+                                            .font(.inter(size: 34,weight: .semibold))
+                                    }
+                                    
+                                    RestaurantSearchBar(search: $viewModel.searchtext)
                                     ScrollView {
                                         LazyVStack(spacing: 10) {
                                             ForEach(viewModel.restaurants) { restaurant in
@@ -52,6 +55,7 @@ struct RestaurantFeedView: View {
                                         }
                                     }
                                 }
+                                
                             } else {
                                 ErrorRetryView(onTap: {
                                     Task {

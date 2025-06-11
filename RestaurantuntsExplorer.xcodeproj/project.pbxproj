@@ -44,6 +44,7 @@
 		68AF9B352DF897D100D44E5A /* FeedConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF9B342DF897D100D44E5A /* FeedConstant.swift */; };
 		68AF9B382DF89AE800D44E5A /* ConnectionManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF9B372DF89AE800D44E5A /* ConnectionManger.swift */; };
 		68AF9B3A2DF9499500D44E5A /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF9B392DF9499500D44E5A /* BackButton.swift */; };
+		68AF9B3C2DF9BD1300D44E5A /* RestaurantSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AF9B3B2DF9BD1300D44E5A /* RestaurantSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		68AF9B342DF897D100D44E5A /* FeedConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConstant.swift; sourceTree = "<group>"; };
 		68AF9B372DF89AE800D44E5A /* ConnectionManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManger.swift; sourceTree = "<group>"; };
 		68AF9B392DF9499500D44E5A /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		68AF9B3B2DF9BD1300D44E5A /* RestaurantSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 			children = (
 				688CD1CE2DF6EA5000108CC3 /* RestaurantFeedView.swift */,
 				688CD1D02DF6ECF800108CC3 /* RestaurantFeedCell.swift */,
+				68AF9B3B2DF9BD1300D44E5A /* RestaurantSearchBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AF9B3C2DF9BD1300D44E5A /* RestaurantSearchBar.swift in Sources */,
 				68AF9B212DF8461D00D44E5A /* RestaurantDetailViewModel.swift in Sources */,
 				688CD1CD2DF6E62200108CC3 /* FontExtention.swift in Sources */,
 				68AF9B2B2DF8676200D44E5A /* ErrorRetryView.swift in Sources */,
